@@ -38,6 +38,7 @@ _El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta
 * [SQL Server 2014](https://www.microsoft.com/es-es/download/details.aspx?id=42299) -Gestor de base de datos
 
 ## Paquetes Nuguet 🛠️
+```
 _AutoMapper.Extensions.Microsoft.DependencyInjection_
 _FluentValidation.AspNetCore_
 _Microsoft.AspNetCore.Mvc.NewtonsoftJson_
@@ -45,7 +46,7 @@ _Microsoft.EntityFrameworkCore.Design_
 _Microsoft.EntityFrameworkCore.SqlServer_
 _Microsoft.EntityFrameworkCore.Tools_
 _Swashbuckle.AspnetCore_
-
+```
 ## Autores ✒️
 
 * **Danilo Estuardo Itzep Luna** 
