@@ -39,13 +39,13 @@ _El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta
 
 ## Paquetes Nuguet 🛠️
 ```
-_AutoMapper.Extensions.Microsoft.DependencyInjection_
-_FluentValidation.AspNetCore_
-_Microsoft.AspNetCore.Mvc.NewtonsoftJson_
-_Microsoft.EntityFrameworkCore.Design_
-_Microsoft.EntityFrameworkCore.SqlServer_
-_Microsoft.EntityFrameworkCore.Tools_
-_Swashbuckle.AspnetCore_
+AutoMapper.Extensions.Microsoft.DependencyInjection
+FluentValidation.AspNetCore
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Swashbuckle.AspnetCore
 ```
 ## Autores ✒️
 
