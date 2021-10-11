@@ -26,17 +26,17 @@ namespace Encuesta.Services
             _configuration = configuration;
         }
 
-        public async Task<string> GenerarTokenService(TblUsuario usuario = null, string oldtoken = null)
+        public async Task<string> GenerarTokenService(TblUsuarios usuario = null, string oldtoken = null)
         {
             return await GenerarTokenServicio(usuario, oldtoken);
         }
 
-        public async Task<TblUsuario> ValidarCredencialesService(UserLogin usuario)
+        public async Task<TblUsuarios> ValidarCredencialesService(UserLogin usuario)
         {
             return await _loginRepository.ValidarCredencialesRepository(usuario);
         }
 
-        public async Task<string> GenerarTokenServicio(TblUsuario usuario = null, string oldToken = "")
+        public async Task<string> GenerarTokenServicio(TblUsuarios usuario = null, string oldToken = "")
         {
                 if (!string.IsNullOrEmpty(oldToken))
                 {
@@ -45,7 +45,7 @@ namespace Encuesta.Services
                     {
                         var oldClaims = new JwtSecurityTokenHandler().ReadJwtToken(oldToken);
 
-                        usuario = new TblUsuario()
+                        usuario = new TblUsuarios()
                         {
                             IdUsuario = int.Parse(oldClaims.Payload["IdUsuario"].ToString()),
                             Usuario = oldClaims.Payload["Usuario"].ToString(),

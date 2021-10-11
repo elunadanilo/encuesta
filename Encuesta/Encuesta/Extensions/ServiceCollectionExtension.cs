@@ -34,11 +34,13 @@ namespace Encuesta.Extensions
             services.AddTransient<ILoginService, LoginService>();
             services.AddTransient<IListadoCamposService, ListadoCamposService>();
             services.AddTransient<IRespuestasService, RespuestasService>();
+            services.AddTransient<IUsuariosService, UsuariosService>();
             //Repositorios
             services.AddTransient<IEncuestaRepository, EncuestaRepository>();
             services.AddTransient<ILoginRepository, LoginRepository>();
             services.AddTransient<IListadoCamposRepository, ListadoCamposRepository>();
             services.AddTransient<IRespuestasRepository, RespuestasRepository>();
+            services.AddTransient<IUsuariosRepository, UsuariosRepository>();
             return services;
         }
 
@@ -46,12 +48,6 @@ namespace Encuesta.Extensions
         {
             services.AddSwaggerGen(doc =>
             {
-                //doc.SwaggerDoc("v1", new OpenApiInfo
-                //{
-                //    Title = "Encuesta",
-                //    Version = "v1",
-                //});
-
                 doc.SwaggerDoc("v1", new OpenApiInfo { Title = "Encuesta", Version = "v1" });
 
                 doc.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

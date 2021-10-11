@@ -20,7 +20,7 @@ namespace Encuesta.Data
         public virtual DbSet<TblEncuesta> TblEncuesta { get; set; }
         public virtual DbSet<TblListadoCampos> TblListadoCampos { get; set; }
         public virtual DbSet<TblRespuestas> TblRespuestas { get; set; }
-        public virtual DbSet<TblUsuario> TblUsuarios { get; set; }
+        public virtual DbSet<TblUsuarios> TblUsuarios { get; set; }
 
 //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 //        {
@@ -92,7 +92,7 @@ namespace Encuesta.Data
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TblUsuario>(entity =>
+            modelBuilder.Entity<TblUsuarios>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario);
 

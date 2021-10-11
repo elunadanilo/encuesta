@@ -2,6 +2,7 @@
 using Encuesta.Controllers.CompletarEncuesta.DTO;
 using Encuesta.Controllers.Encuesta.DTO;
 using Encuesta.Controllers.ListadoCampos.DTO;
+using Encuesta.Controllers.Usuarios.DTO;
 using Encuesta.Data;
 
 namespace Encuesta.Mappings
@@ -21,6 +22,9 @@ namespace Encuesta.Mappings
 
             CreateMap<TblRespuestas, RespuestasEncuestaDTO>();
             CreateMap<RespuestasEncuestaDTO, TblRespuestas>();
+
+            CreateMap<TblUsuarios, UsuariosDTO>();
+            CreateMap<UsuariosDTO, TblUsuarios>();
         }
     }
 }

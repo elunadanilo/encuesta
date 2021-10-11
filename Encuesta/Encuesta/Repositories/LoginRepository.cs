@@ -18,7 +18,7 @@ namespace Encuesta.Repositories
         {
             _context = context;
         }
-        public async Task<TblUsuario> ValidarCredencialesRepository(UserLogin usuario)
+        public async Task<TblUsuarios> ValidarCredencialesRepository(UserLogin usuario)
         {
             return await _context.TblUsuarios.FirstOrDefaultAsync(x => x.Usuario == usuario.User && x.Password == usuario.Password);
         }

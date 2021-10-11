@@ -30,9 +30,13 @@ namespace Encuesta.Repositories
             await _listadoCamposRepository.InsertarListadoCampoRepository(listado);
         }
 
-        public async Task<TblListadoCampos> ObtenerListadoCampoEncuestaService(Guid listado)
+        public async Task<IEnumerable<TblListadoCampos>> ObtenerListadoCampoEncuestaService(Guid listado)
         {
-            return await _listadoCamposRepository.ObtenerListadoCampoEncuestaRepository(listado);
+            var preguntas =  await _listadoCamposRepository.ObtenerListadoCamposRepository();
+
+            preguntas = preguntas.Where(x => new Guid(x.Encuesta) == listado);
+
+            return preguntas;
         }
 
         public async Task<TblListadoCampos> ObtenerListadoCampoService(int id, Guid listado)

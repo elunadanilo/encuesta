@@ -5,6 +5,7 @@ using Encuesta.Helpers;
 using Encuesta.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Encuesta.Controllers.CompletarEncuesta
@@ -32,13 +33,13 @@ namespace Encuesta.Controllers.CompletarEncuesta
         /// </summary>
 
         [HttpGet("{encuesta}")]
-        public async Task<IActionResult> ObtenerListadoRespuestasEncuesta(Guid encuesta)
+        public async Task<IActionResult> ObtenerListadoPreguntasEncuesta(Guid encuesta)
         {
             var encuestaListado = await _listadoCampoService.ObtenerListadoCampoEncuestaService(encuesta);
 
-            var encuestaDto = _mapper.Map<PreguntasEncuestaDTO>(encuestaListado);
+            var encuestaDto = _mapper.Map<IEnumerable<PreguntasEncuestaDTO>>(encuestaListado);
 
-            var response = new ApiResponse<PreguntasEncuestaDTO>(encuestaDto);
+            var response = new ApiResponse<IEnumerable<PreguntasEncuestaDTO>>(encuestaDto);
 
             return Ok(response);
         }

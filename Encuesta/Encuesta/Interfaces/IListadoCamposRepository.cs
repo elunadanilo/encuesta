@@ -12,7 +12,5 @@ namespace Encuesta.Interfaces
         Task InsertarListadoCampoRepository(TblListadoCampos listado);
         Task<bool> ActualizarListadoCampoRepository(TblListadoCampos listado);
         Task<bool> EliminarListadoCampoRepository(int id, Guid listado);
-
-        Task<TblListadoCampos> ObtenerListadoCampoEncuestaRepository(Guid listado);
     }
 }

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Encuesta.Controllers.Encuesta
 {
-    [Authorize]
+   // [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]

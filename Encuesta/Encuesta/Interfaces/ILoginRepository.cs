@@ -10,6 +10,6 @@ namespace Encuesta.Interfaces
 {
     public interface ILoginRepository
     {
-        Task<TblUsuario> ValidarCredencialesRepository(UserLogin usuario);
+        Task<TblUsuarios> ValidarCredencialesRepository(UserLogin usuario);
     }
 }

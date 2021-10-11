@@ -3,6 +3,7 @@ using Encuesta.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Encuesta.Repositories
@@ -45,13 +46,6 @@ namespace Encuesta.Repositories
             var client = await _context.TblListadoCampos.FirstOrDefaultAsync(x => x.IdListadoCampoEncuesta == id && x.Encuesta == listado.ToString());
             return client;
         }
-
-        public async Task<TblListadoCampos> ObtenerListadoCampoEncuestaRepository(Guid listado)
-        {
-            var client = await _context.TblListadoCampos.FirstOrDefaultAsync(x => x.Encuesta == listado.ToString());
-            return client;
-        }
-
         public async Task<IEnumerable<TblListadoCampos>> ObtenerListadoCamposRepository()
         {
             var listado = await _context.TblListadoCampos.ToListAsync();

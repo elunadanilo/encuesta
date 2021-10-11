@@ -7,7 +7,7 @@ namespace Encuesta.Interfaces
 {
     public interface ILoginService
     {
-        Task<String> GenerarTokenService(TblUsuario usuario = null, string oldtoken = null);
-        Task<TblUsuario> ValidarCredencialesService(UserLogin usuario);
+        Task<String> GenerarTokenService(TblUsuarios usuario = null, string oldtoken = null);
+        Task<TblUsuarios> ValidarCredencialesService(UserLogin usuario);
     }
 }

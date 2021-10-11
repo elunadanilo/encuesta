@@ -12,6 +12,6 @@ namespace Encuesta.Interfaces
         Task InsertarListadoCampoService(TblListadoCampos listado);
         Task<bool> ActualizarListadoCampoService(TblListadoCampos listado);
         Task<bool> EliminarListadoCampoService(int id, Guid listado);
-        Task<TblListadoCampos> ObtenerListadoCampoEncuestaService(Guid listado);
+        Task<IEnumerable<TblListadoCampos>> ObtenerListadoCampoEncuestaService(Guid listado);
     }
 }

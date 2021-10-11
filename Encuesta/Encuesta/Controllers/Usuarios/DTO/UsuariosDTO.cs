@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-#nullable disable
-
-namespace Encuesta.Data
+namespace Encuesta.Controllers.Usuarios.DTO
 {
-    public partial class TblUsuarios
+    public class UsuariosDTO
     {
-        public int IdUsuario { get; set; }
         public string Usuario { get; set; }
         public string Password { get; set; }
         public string Nombre { get; set; }
