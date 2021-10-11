@@ -28,12 +28,12 @@ _Restaurar la base de datos y modificar la cadena de conexión a tu servidor_
 
 Después de seguir las instrucciones de instalación debes realizar lo siguiente:
 
-*Crear un usuario desde el endpoint /api/Usuarios
-*Loguearte con el usuario creado desde el endpoint /api/Login/v1/dologin
-*Crear una encuesta desde el endpoint POST /api/Encuesta
-*Crear las preguntas para determinada encuesta desde el endpoint POST /api/ListadoCampos estas preguntas en el tipo de campo solo aceptaran el texto (Numero, Texto o Fecha)
-*Para contestar la encuesta deberas utilizar el endpoint POST /api/CompletarEncuesta
-*Para ver el resultado de todas las encuestas deberas utilizar el endpoint GET /api/Encuesta/respuestas/{id}
+* Crear un usuario desde el endpoint /api/Usuarios
+* Loguearte con el usuario creado desde el endpoint /api/Login/v1/dologin
+* Crear una encuesta desde el endpoint POST /api/Encuesta
+* Crear las preguntas para determinada encuesta desde el endpoint POST /api/ListadoCampos estas preguntas en el tipo de campo solo aceptaran el texto (Numero, Texto o Fecha)
+* Para contestar la encuesta deberas utilizar el endpoint POST /api/CompletarEncuesta
+* Para ver el resultado de todas las encuestas deberas utilizar el endpoint GET /api/Encuesta/respuestas/{id}
 
 _Para todas las entidades se habilitaron los endpoints para realizar un CRUD y puedes visualizarlos al ejecutar el proyecto. Estos se mostraran por medio de Swagger_
 
