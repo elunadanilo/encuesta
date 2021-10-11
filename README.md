@@ -27,9 +27,9 @@ _Restaurar la base de datos y modificar la cadena de conexión a tu servidor_
 ### Forma de uso 🔧
 
 _Para todas las entidades se habilitaron los endpoints para realizar un CRUD y puedes visualizarlos al ejecutar el proyecto. Estos se mostraran por medio de Swagger_
-_El CRUD de la TblEncuesta administra los encabezados de las encuestas_
-_El CRUD de la TblListadoCampos administra las preguntas de una encuesta_
-_El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta_
+* El CRUD de la TblEncuesta administra los encabezados de las encuestas_
+ * El CRUD de la TblListadoCampos administra las preguntas de una encuesta_
+* El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta_
 
 ## Construido con 🛠️
 
