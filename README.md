@@ -22,7 +22,9 @@ _Para poder editar y ejecutar el proyecto deberás:_
 
 _Instalar Visual Studio 2019 o Visual Studio Community 2019_
 _Instalar NET Core 5.0_
-_Restaurar la base de datos y modificar la cadena de conexión a tu servidor_
+_Restaurar la base de datos_
+_Correr script con ejemplos de registro en tablas_
+_Modificar la cadena de conexión a tu servidor_
 
 ### Forma de uso 🔧
 
@@ -37,9 +39,9 @@ Después de seguir las instrucciones de instalación debes realizar lo siguiente
 
 _Para todas las entidades se habilitaron los endpoints para realizar un CRUD y puedes visualizarlos al ejecutar el proyecto. Estos se mostraran por medio de Swagger_
 
-* El CRUD de la TblEncuesta administra los encabezados de las encuestas_
-* El CRUD de la TblListadoCampos administra las preguntas de una encuesta_
-* El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta_
+* El CRUD de la TblEncuesta administra los encabezados de las encuestas
+* El CRUD de la TblListadoCampos administra las preguntas de una encuesta
+* El CRUD de la TblRespuestas administra las respuestas obtenidas de una encuesta
 
 ## Construido con 🛠️
 
