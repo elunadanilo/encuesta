@@ -1,4 +1,6 @@
 ﻿using Encuesta.Data;
+using Encuesta.Exceptions;
+using Encuesta.Helpers;
 using Encuesta.Interfaces;
 using System.Threading.Tasks;
 
@@ -14,7 +16,16 @@ namespace Encuesta.Repositories
         }
         public async Task InsertarUsuarioService(TblUsuarios usuario)
         {
-            await _usuariosRepository.InsertarUsuarioRepository(usuario);
+            try
+            {
+                await _usuariosRepository.InsertarUsuarioRepository(usuario);
+            }
+            catch (System.Exception exc)
+            {
+                Log.doLog($"{exc}");
+                throw new BusinessException("Error al grabar usuario");
+            }
+
         }
     }
 }

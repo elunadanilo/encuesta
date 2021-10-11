@@ -1,5 +1,6 @@
 
 using Encuesta.Data;
+using Encuesta.Exceptions;
 using Encuesta.Extensions;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -37,7 +38,7 @@ namespace Encuesta
 
             services.AddControllers(options =>
             {
-                //options.Filters.Add<GlobalExceptionFilter>();
+                options.Filters.Add<GlobalExceptionFilter>();
             }).AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
@@ -48,7 +49,6 @@ namespace Encuesta
                 //options.SuppressModelStateInvalidFilter = true;
             });
 
-            // services.AddOptions(Configuration);
             services.AddDbContexts(Configuration);
             services.AddServices();
 

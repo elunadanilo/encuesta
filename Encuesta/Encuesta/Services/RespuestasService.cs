@@ -1,5 +1,7 @@
 ﻿using Encuesta.Data;
 using Encuesta.Data.Models;
+using Encuesta.Exceptions;
+using Encuesta.Helpers;
 using Encuesta.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,17 @@ namespace Encuesta.Services
         }
         public async Task InsertarRespuestaService(TblRespuestas respuesta)
         {
-            await _respuestasRepository.InsertarRespuestaRepository(respuesta);
+            try
+            {
+                await _respuestasRepository.InsertarRespuestaRepository(respuesta);
+            }
+            catch (Exception exc)
+            {
+
+                Log.doLog($"{exc}");
+                throw new BusinessException("Error al grabar respuesta");
+            }
+
         }
 
         public async Task<List<ListadoRespuestasEncuesta>> ObtenerListadoRespuestasService(Guid encuesta)

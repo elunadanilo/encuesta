@@ -9,5 +9,7 @@ namespace Encuesta.Controllers.CompletarEncuesta.DTO
     {
         public int IdListadoCampoEncuesta { get; set; }
         public string Respuesta { get; set; }
+        public string TipoDeCampo { get; set; }
+        public bool Requerido { get; set; }
     }
 }

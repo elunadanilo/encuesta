@@ -1,4 +1,6 @@
 ﻿using Encuesta.Data;
+using Encuesta.Exceptions;
+using Encuesta.Helpers;
 using Encuesta.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,17 +20,41 @@ namespace Encuesta.Services
 
         public async Task<bool> ActualizarEncuestaService(TblEncuesta encuesta)
         {
-            return await _encuestaRepository.ActualizarEncuestaRepository(encuesta);
+            try
+            {
+                return await _encuestaRepository.ActualizarEncuestaRepository(encuesta);
+            }
+            catch (Exception exc)
+            {
+                Log.doLog($"{exc}");
+                throw new BusinessException("Error al actualizar encabezado de encuesta");
+            }
         }
 
         public async Task<bool> EliminarEncuestaService(Guid id)
         {
-            return await _encuestaRepository.EliminarEncuestaRepository(id);
+            try
+            {
+                return await _encuestaRepository.EliminarEncuestaRepository(id);
+            }
+            catch (Exception exc)
+            {
+                Log.doLog($"{exc}");
+                throw new BusinessException("Error al eliminar encabezado de encuesta");
+            }
         }
 
         public async Task InsertarEncuestaService(TblEncuesta encuesta)
         {
-            await _encuestaRepository.InsertarEncuestaRepository(encuesta);
+            try
+            {
+                await _encuestaRepository.InsertarEncuestaRepository(encuesta);
+            }
+            catch (Exception exc)
+            {
+                Log.doLog($"{exc}");
+                throw new BusinessException("Error al grabar encabezado de encuesta");
+            }
         }
 
         public async Task<TblEncuesta> ObtenerEncuestaService(Guid id)
